@@ -1,0 +1,257 @@
+.custom-border-hover {
+  border: 2px solid transparent; /* Bordo trasparente iniziale */
+  outline: 2px solid #FFFFFF8C; /* Contorno iniziale */
+  transition: outline-color 0.3s ease; /* Transizione sul colore del contorno */
+  box-sizing: border-box; /* Le dimensioni non saranno alterate dal bordo */
+}
+
+.custom-border-hover:hover {
+  outline: 5px solid white; /* Contorno al passaggio del mouse */
+}
+
+.customModal-body {
+  background-color: #5052b5;
+}
+
+.customModal-content {
+  background-color: #3c3e86;
+}
+
+.logo-responsive {
+   max-width: 100%;   /* Il logo non supererà mai la larghezza del suo contenitore */
+   height: auto;      /* La sua altezza verrà adattata proporzionalmente */
+   display: block;    /* Rimuove eventuali spazi indesiderati sotto l'immagine */
+   border-radius: 10px; /* Bordi arrotondati */
+}
+
+/* Wrapper Intro - centrato verticalmente e orizzontalmente */
+#intro-wrapper {
+    position: relative;
+    min-height: 100vh; /* Copre tutta l'altezza dello schermo */
+    width: 100%;
+    background-image: url("../../images/bgIntro.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex; /* Aggiungi Flexbox per centrare il contenuto */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+#intro-wrapper::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Ombra scura sull'immagine */
+}
+
+/* Contenitore Intro */
+#intro {
+    z-index: 2; /* Assicurati che il contenitore sia sopra l'overlay */
+    background-attachment: fixed;
+    background-image: url("../../images/intro.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 10px;
+    padding: 1em; /* Padding ridotto */
+    max-width: 500px; /* Larghezza massima ridotta */
+    width: 60%; /* Larghezza responsiva */
+    margin: 0 auto; /* Centra orizzontalmente */
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Ombra */
+    border: 2px solid white; /* Bordo bianco */
+    animation: bounce-in 1s ease-in-out; /* Animazione */
+    display: flex; /* Usa Flexbox per centrare il contenuto */
+    flex-direction: column; /* Organizza gli elementi in colonna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra orizzontalmente */
+    text-align: center; /* Allinea il testo al centro */
+    color: #fff5f1;
+}
+
+#intro p {
+    font-size: 1em;
+}
+
+/* Stile per la galleria */
+#gallery {
+    background-color: #fff5f1;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#gallery h2 {
+    font-size: 2em;
+    color: #8e0606;
+}
+
+#gallery p {
+    font-size: 1.2em;
+    color: #bb8376;
+}
+
+.gallery-slider h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #8e0606;
+}
+
+/* Stile per la galleria */
+#gallery img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-container .col {
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    height: auto; /* Rende dinamico se vuoi mantenerlo responsivo */
+}
+
+.gallery-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9; /* Forza un rapporto fisso */
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 15px;
+}
+
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#prev-btn-food, #prev-btn-local, #prev-btn-menu {
+    left: 10px;
+}
+
+#next-btn-food, #next-btn-local, #next-btn-menu {
+    right: 10px;
+}
+
+#contact {
+    min-height: 100vh;
+}
+
+.btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+}
+
+#footer {
+    background: #000000;
+}
+
+#footer > .inner .menu {
+    font-size: 0.8em;
+    color: #FFFFFF;
+}
+
+/* CSS per il consenso - testo più piccolo e responsive */
+.comment-form-consent {
+    font-size: 0.85rem;  /* Imposta una dimensione del font più piccola */
+    line-height: 1.5;    /* Rende il testo più leggibile con un'interlinea maggiore */
+}
+
+/* Animazione di rimbalzo */
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.customsliderbtn_right { 
+    padding: 0px;
+    margin: 0px;
+    letter-spacing: 0px;
+} 
+
+.customsliderbtn_left { 
+    padding: 0px;
+    margin: 0px;
+    letter-spacing: 0px;
+} 
+
+/* Responsive design */
+@media screen and (max-width: 980px) {
+    #intro {
+        background-size: cover;
+    }
+
+    #intro-wrapper {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #intro p {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        font-size: 0.8em !important;
+    }
+
+    .comment-form-consent {
+        font-size: 0.75rem; 
+    }
+
+    .gallery-container .col {
+        flex: 0 0 100%;
+    }
+}
