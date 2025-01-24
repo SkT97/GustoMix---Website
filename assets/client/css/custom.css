@@ -1,3 +1,11 @@
+ body, input, select, textarea {
+    color: rgba(255, 255, 255, 0.55);
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    font-size: 16.5pt;
+    font-weight: normal;
+    line-height: 1.75;
+}
+
 .custom-border-hover {
   border: 2px solid transparent; /* Bordo trasparente iniziale */
   outline: 2px solid #FFFFFF8C; /* Contorno iniziale */
@@ -228,6 +236,30 @@
 } 
 
 /* Responsive design */
+@media screen and (max-width: 1680px) {
+
+    body, input, select, textarea {
+        font-size: 13pt;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    body, input, select, textarea {
+        font-size: 12pt;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    body, input, select, textarea {
+        font-size: 11pt;
+    }
+
+}
+
 @media screen and (max-width: 980px) {
     #intro {
         background-size: cover;
@@ -254,4 +286,10 @@
     .gallery-container .col {
         flex: 0 0 100%;
     }
+
+    #gallery p {
+        font-size: 1.1em;
+    }
 }
+
+
