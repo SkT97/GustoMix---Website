@@ -290,6 +290,10 @@
     #gallery p {
         font-size: 1.1em;
     }
+
+    .wrapper {
+        padding-top: 45px; /* Riduci spaziature */
+    }
 }
 
 
